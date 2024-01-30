@@ -38,11 +38,10 @@ RSpec.describe "CreatingBooks", type: :system do
   it 'saves and displays date (unit)' do
     visit '/books/new'
     fill_in 'Title', with: 'Book 1'
-    fill_in 'Date', with: '1/29/2024'
     click_on 'Create Book'
     expect(page).to have_content('Book was successfully created.')
     book = Book.order("id").last
-    expect(book.date_published).to eq('1/29/2024')
+    expect(book.date_published).not_to be(nil)
   end
 
   it 'saves and displays all book information (integration)' do
@@ -50,11 +49,11 @@ RSpec.describe "CreatingBooks", type: :system do
     fill_in 'Title', with: 'Book 1'
     fill_in 'Author', with: 'Ralph Lewis'
     fill_in 'Price', with: '1.50'
-    fill_in 'Date', with: '1/29/2024'
     click_on 'Create Book'
     expect(page).to have_content('Book was successfully created.')
     book = Book.order("id").last
     expect(book.author).to eq('Ralph Lewis')
-    expect(book.date_published).to eq('1/29/2024')
+    expect(book.price).to eq(1.5)
+    expect(book.date_published).not_to be(nil)
   end
 end

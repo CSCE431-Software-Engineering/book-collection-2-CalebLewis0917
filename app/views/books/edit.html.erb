@@ -1,6 +1,18 @@
 <h1>Editing book</h1>
 
-<%= render "form", book: @book %>
+<%= form_for(@book) do |f| %>
+  <div>
+    <%= f.label :title, style: "display: block" %>
+    <%= f.text_field :title %>
+    <%= f.label :author, style: "display: block" %>
+    <%= f.text_field :author %>
+    <%= f.label :price, style: "display: block" %>
+    <%= f.text_field :price %>
+    <%= f.label :date_published, style: "display: block" %>
+    <%= f.date_select :date_published %> 
+  </div>
+  <%= f.submit("Update Book") %>
+<% end %>
 
 <br>
 
