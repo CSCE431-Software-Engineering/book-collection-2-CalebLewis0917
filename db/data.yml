@@ -1,0 +1,30 @@
+
+---
+ar_internal_metadata:
+  columns:
+  - key
+  - value
+  - created_at
+  - updated_at
+  records: 
+  - - environment
+    - development
+    - 2024-01-19 19:52:15.341769000 Z
+    - 2024-01-19 19:52:15.341769000 Z
+
+---
+books:
+  columns:
+  - id
+  - title
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - pingas
+    - 2024-01-19 19:54:36.145599000 Z
+    - 2024-01-19 19:54:54.064851000 Z
+  - - 2
+    - doink ahanehue
+    - 2024-01-19 19:55:15.200773000 Z
+    - 2024-01-19 19:55:15.200773000 Z

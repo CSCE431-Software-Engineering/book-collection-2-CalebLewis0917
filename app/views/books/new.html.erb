@@ -1,0 +1,19 @@
+<h1>New book</h1>
+
+<%= form_for(@book) do |f| %>
+  <div>
+    <%= f.label :title, style: "display: block" %>
+    <%= f.text_field :title %>
+    <%= f.label :author, style: "display: block" %>
+    <%= f.text_field :author %>
+    <%= f.label :price, style: "display: block" %>
+    <%= f.text_field :price %>
+    <%= f.label :date_published, style: "display: block" %>
+    <%= f.date_select :date_published %>  
+  </div>
+  <%= f.submit("Create Book") %>
+<% end %>
+
+<div>
+  <%= link_to "Back to books", books_path %>
+</div>
